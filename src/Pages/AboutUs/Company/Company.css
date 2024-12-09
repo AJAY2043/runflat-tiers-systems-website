@@ -1,0 +1,100 @@
+/* RunFlatSystem.css */
+
+/* General styles */
+.runflat-system {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+  }
+  
+  /* Carousel Styles */
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .carousel-slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .carousel-controls button {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .carousel-controls button:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* About Us Section */
+  .about-us-section {
+    padding: 50px;
+    background-color: #ffffff;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s forwards 0.5s;
+  }
+  
+  .about-us-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* History and Heritage Section */
+  .about-us-section h3, .about-us-section h4 {
+    font-size: 2rem;
+    margin-top: 30px;
+    color: #333;
+  }
+  
+  /* Animation for fading in */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .carousel-slide {
+      height: 300px;
+    }
+  
+    .about-us-section h2 {
+      font-size: 2rem;
+    }
+  
+    .about-us-section p {
+      font-size: 1rem;
+    }
+  }
+  

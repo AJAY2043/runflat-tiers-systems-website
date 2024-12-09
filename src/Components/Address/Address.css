@@ -1,0 +1,39 @@
+/* Address Section Styles */
+.address-section {
+    padding: 50px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .address-section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .address-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 700;
+  }
+  
+  .address-content p {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .address-content h2 {
+      font-size: 1.5rem;
+    }
+  
+    .address-content p {
+      font-size: 1rem;
+    }
+  }
+  

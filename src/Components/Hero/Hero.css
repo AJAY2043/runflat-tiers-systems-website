@@ -1,0 +1,101 @@
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Section 1 Animations
+.hero-image {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  display: block;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.hero-text-1 {
+  font-size: 2rem;
+  animation: slideDown 0.5s ease-in-out 0.5s forwards;
+  opacity: 0;
+}
+
+.hero-text-2 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  animation: slideDown 0.5s ease-in-out 1s forwards;
+  opacity: 0;
+  -webkit-animation: slideDown 0.5s ease-in-out 1s forwards;
+} */
+
+/* Section 2: Sliding Animation
+.hero-image2 .hero-text-slide {
+  animation: slideIn 1s ease-in-out;
+} */
+
+/* Section 3: Zoom-In Animation
+.hero-image3 .hero-text-zoom {
+  animation: zoomIn 1s ease-in-out;
+} */
+
+/* Section 4: Fade-In Animation */
+.hero-image4 .hero-text-fade {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translate(-50%, -100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

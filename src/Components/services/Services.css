@@ -1,0 +1,118 @@
+.about-section {
+  padding: 2rem;
+  background: #f7f7f7;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.8s ease-in-out;
+}
+
+.about-header.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-header h1 {
+  font-size: 2rem;
+  color: #004aad;
+}
+
+.about-header p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.about-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.step-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-in-out;
+}
+
+.step-card i {
+  font-size: 2rem;
+  color: #004aad;
+  margin-bottom: 0.5rem;
+}
+
+.step-card h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.step-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.step-card.slide-in-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.step-card.slide-in-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about-signature {
+  text-align: center;
+  margin-top: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-in-out;
+}
+
+.about-signature.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-signature img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.about-signature h3 {
+  font-size: 1.2rem;
+  color: #004aad;
+}
+
+.about-signature p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Continuous Animation */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+i.fas {
+  animation: pulse 1.5s infinite;
+}
