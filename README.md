@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+<div align="center">
+  <img src="./assets/banner.png" alt="Run Flat Tire Systems — second iteration of the client site" width="100%" />
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-0A1024?style=flat-square&logo=react&logoColor=61DAFB)
+![React Router](https://img.shields.io/badge/React_Router-0A1024?style=flat-square&logo=reactrouter&logoColor=CA4245)
+![Font Awesome](https://img.shields.io/badge/Font_Awesome-0A1024?style=flat-square&logo=fontawesome&logoColor=538DD7)
+![CSS3](https://img.shields.io/badge/CSS3-0A1024?style=flat-square&logo=css3&logoColor=1572B6)
+![Status](https://img.shields.io/badge/iteration-2_of_3-7C4DFF?style=flat-square&labelColor=0A1024)
 
-In the project directory, you can run:
+</div>
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Corporate site for **Run Flat Tire Systems** — company pages plus five product families covering run-flat inserts, bead-lock systems and wheels for military, armoured and specialist vehicles.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This is the **second of three iterations** of the same client project, and the README says so rather than presenting it as a standalone build:
 
-### `npm test`
+| Repository | What it is |
+|---|---|
+| `myfirst-freelance-website` | The original build — my first freelance delivery |
+| **`runflat-tiers-systems-website`** | **This one — restructured, hyphenated product routes** |
+| `run-flat-systems` | The current rebuild — JSON catalogue data, per-product detail routes |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The main change at this stage was readable URLs: `/runflat-tires` and `/military-runflat-tires` instead of the original `/runflatsystems` and `/militaryrunflatsystem`.
 
-### `npm run build`
+## Preview
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Run Flat Tire Systems landing page](./assets/preview-home.jpg)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<sub>Screenshot captured from a local production build of this repository.</sub>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features
 
-### `npm run eject`
+- **Fifteen routes**, all client-side
+- **Company section** across six pages — company, team, news, markets, materials, strengths
+- **Five product pages** — `/runflat-tires`, `/military-runflat-tires`, `/beadlock-systems`, `/heavy-duty-wheels`, `/military-wheels`
+- **Credentials and resources** pages
+- **Contact page**
+- **Landing page** composed from stacked hero sections, services and products
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Tech stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Layer | Technology |
+|---|---|
+| Framework | React (Create React App) |
+| Routing | React Router DOM — 15 routes |
+| Icons | Font Awesome, React Icons |
+| Styling | Hand-written CSS per component |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Build issue: three packages are missing from package.json
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**`npm install && npm run build` fails on a clean clone.** Three packages the code needs are not declared:
 
-## Learn More
+```bash
+npm install react-refresh @fortawesome/fontawesome-svg-core react-icons
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `react-refresh` — required by the Create React App webpack config
+- `@fortawesome/fontawesome-svg-core` — peer dependency of `@fortawesome/react-fontawesome`
+- `react-icons` — imported directly by `src/Components/Products/`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Adding all three to `dependencies` is the proper fix. That is a source change, so it is documented here rather than applied.
 
-### Code Splitting
+Also worth noting: `cra-template` and `rimraf` are listed under `dependencies` where they do not belong, and `framer-motion` and `react-spring` are declared but never imported.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Running locally
 
-### Analyzing the Bundle Size
+```bash
+git clone https://github.com/AJAY2043/runflat-tiers-systems-website.git
+cd runflat-tiers-systems-website
+npm install
+npm install react-refresh @fortawesome/fontawesome-svg-core react-icons
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Future improvements
 
-### Making a Progressive Web App
+- Fix `package.json` as described above — this is the first thing to do
+- Set a real page title and favicon; `public/index.html` still says `React App`
+- Carry the JSON catalogue approach from `run-flat-systems` back here, or retire this iteration in its favour
+- Add a 404 route
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Author
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Ajay Krishna Reddy Bhavanam** — Melbourne, Australia
+[LinkedIn](https://linkedin.com/in/ajay-krishna-reddy) · [GitHub](https://github.com/AJAY2043)
